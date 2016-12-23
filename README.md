@@ -67,4 +67,4 @@ Não é necessário montar todas as páginas. O objetivo é transmitir na montag
 # Boa sorte
 ## Muito obrigado pelo interesse em participar
 
-![Home](https://raw.githubusercontent.com/dindigital/teste-frontend-2016/master/layouts/business-website-home-psd-template.jpg)
+![Home](https://raw.githubusercontent.com/dindigital/teste-frontend-2017/master/layouts/business-website-home-psd-template.jpg)
