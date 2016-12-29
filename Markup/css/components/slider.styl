@@ -1,0 +1,44 @@
+.banner {
+	background: #81e4ed;
+	text-align: center;
+	padding: 20px 0;
+	img {
+		max-height: 440px;
+		width: 100%;
+	}
+}
+
+.slider {
+	position: relative;
+	height: 200px;
+	overflow: hidden;
+	&-item {
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		opacity: 0;
+		transition: all 0.5s ease;
+		&.active {
+			opacity: 1;
+		}
+	}
+	&-control {
+	    width: 100%;
+	    height: 30px;
+	    text-align: center;
+		.a-control {
+		    width: 15px;
+		    height: 15px;
+		    background: #72a5a9;
+		    margin: 0 5px;
+		    display: inline-block;
+		    border-radius: 50%;
+	    }
+	}
+}
+@media screen and (min-width: sm) {
+	.slider {
+		height: 460px;	
+	}
+}
