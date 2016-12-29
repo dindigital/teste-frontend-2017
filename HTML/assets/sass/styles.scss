@@ -1,0 +1,13 @@
+// sobrescreve bootstrap
+@import "variaveis";
+// bootstrap
+@import "vendor/bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import "../css/lib/swiper.min.css";
+// Custom
+@import "font";
+@import "mixins";
+@import "ui";
+@import "estrutura";
+
+
