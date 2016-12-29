@@ -1,0 +1,88 @@
+@import '../_variables.scss';
+
+
+.footer {
+  background: $secondary-color;
+  border-top: 1px solid $footer-border;
+  clear: both;
+  height: 320px;
+  margin-top: 40px;
+
+  .description, 
+  a {
+    color: $footer-text-color;
+    font-size: 14px;
+  }
+  
+  .title {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 21px 0;
+  }
+}
+
+.about,
+.explore,
+.browse,
+.address,
+.social {
+  float: left;
+  margin: 32px 0 40px 0;
+}
+
+.about, 
+.explore, 
+.browse {
+  margin-right: 64px;
+}
+
+.about {
+  width: 238px;
+
+  .description {
+    line-height: 17px;
+  }
+}
+.explore li, 
+.browse li {
+  margin: 12px 0;
+}
+
+.explore li a,
+.browse li a {
+  text-transform: capitalize;
+}
+
+.explore li a:hover, 
+.browse li a:hover {
+  color: $hover-link-footer;
+}
+
+.social {
+  float: right;
+  width: 213px;
+
+  .title--social {
+    margin-left: 24px;
+  }
+  
+  a {
+    display: block;
+    float: left;
+    height: 51px;
+    margin: 0 0 10px 18px;
+    width: 53px;
+  }
+}
+
+.copyright {
+  clear: both;
+  float: left;
+  font-size: 13px;
+}
+
+.footer__brand {
+  display: block;
+  float: right;
+}

@@ -1,0 +1,332 @@
+// ===================================================
+// Reset
+// ===================================================
+// Adapted from Normalize
+// https://github.com/necolas/normalize.css/
+// and Eric Meyer's Reset
+// http://meyerweb.com/eric/tools/css/reset/
+// ===================================================
+
+// It's safe to use box-sizing
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+// Prevent iOS resizing text on orientation change
+html {
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+// All margin and padding removed
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+// Uncomment if not using progressive enhancement for HTML4 browsers
+// (Never styling an HTML5 element directly rather its children)
+/*
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+*/
+
+// Address `[hidden]` styling not present in IE 8/9/10
+[hidden],
+template {
+  display: none;
+}
+
+// Strip styling from lists
+ol, ul {
+  list-style: none;
+}
+
+// Collapse table borders
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+// Unstyle blockquotes
+blockquote,q {
+  quotes: none;
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
+}
+
+// Correct `inline-block` display not defined in IE 8/9.
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+// Normalise vertical alignment of `progress` in Chrome, Firefox, and Opera.
+progress {
+  vertical-align: baseline;
+}
+
+// Make links indistinguishable unless we specify
+// Remove the grey background colour from active links in IE 10.
+// Remove underline
+a {
+  text-decoration: none;
+  background: transparent;
+}
+
+// Remove tap highlight on iOS
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+// Improve readability when focused and also mouse hovered in all browsers.
+a,
+button,
+input[type=submit] {
+  &:active,
+  &:hover {
+    outline: transparent;
+  }
+}
+
+// Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+// Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+b,
+strong {
+  font-weight: bold;
+}
+
+// Address styling not present in Safari and Chrome.
+dfn {
+  font-style: italic;
+}
+
+// Remove border when inside `a` element in IE 8/9/10.
+// Make all images responsive by default
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+// Prevent `sub` and `sup` affecting `line-height` in all browsers: em;
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+// Correct overflow not hidden in IE 9/10/11.
+svg:not(:root) {
+  overflow: hidden;
+}
+
+// Address differences between Firefox and other browsers.
+hr {
+  height: 0;
+  -moz-box-sizing: content-box;
+       box-sizing: content-box;
+}
+
+// Address odd `em`-unit font size rendering in all browsers.
+code,
+kbd,
+pre,
+samp {
+  font-family: "Menlo", "Inconsolata", "Menlo", "Consolas", "Lucida Console", monospace;
+  font-size: 1em;
+}
+
+
+// Correct properties not being inherited.
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+// Address inconsistent `text-transform` inheritance for `button` and `select`.
+button,
+select {
+  text-transform: none;
+}
+
+input,
+textarea,
+select {
+  background-image: none;
+}
+
+// Correct inability to style clickable `input` types in iOS.
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+// Re-set default cursor for disabled elements.
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+// Remove inner padding and border in Firefox 4+.
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+// Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet.
+input {
+  line-height: normal;
+}
+
+// Address box sizing set to `content-box` in IE 8/9/10.
+// Remove excess padding in IE 8/9/10.
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+// Fix the cursor style for Chrome's increment/decrement buttons.
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+// Address `appearance` set to `searchfield` in Safari and Chrome.
+// Remove rounded search field in iOS Safari
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+// Remove inner padding and search cancel button in Safari and Chrome on OS X.
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+// Remove fieldset margins and padding
+fieldset {
+  border: 0;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+  // so we reset that to ensure it behaves more like a standard block element.
+  // See https://github.com/twbs/bootstrap/issues/12359.
+}
+
+// Correct `color` not being inherited in IE 8/9/10/11.
+legend {
+  border: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  line-height: inherit;
+}
+
+// Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+label {
+  display: inline-block;
+  max-width: 100%;
+}
+
+// Remove default vertical scrollbar in IE 8/9/10/11.
+// Only allow vertical resizing
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+
+// Don't inherit the `font-weight`
+optgroup {
+  font-weight: bold;
+}
+
+// Make multiple select elements height not fixed
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+// Make range inputs behave like textual form controls
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+// Prevent empty paragraphs in WYSIWYG editors
+p:empty {
+  display: none;
+}

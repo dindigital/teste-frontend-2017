@@ -1,0 +1,59 @@
+@import '../_variables.scss';
+
+.lastest__works {
+  clear: left;
+
+}
+.title__works {
+  background: url(../images/seta.png) no-repeat left;
+  float: left;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 19px 0 15px 0;
+  padding: 8px 0 0 38px;
+  text-transform: uppercase;
+}
+.carousel__nav {
+  float: right;
+  margin-top: 20px;
+
+  i {
+    background-color: $bg-apresentation;
+    border-radius: 50%;
+    padding: 7px;
+    color: $tertiary-color;
+  }
+}
+.carousel__wrapper {
+  border-top: 1px solid $border-carousel;
+  border-bottom: 1px solid $border-carousel;
+  clear: left;
+  height: 220px;
+
+  .item__carousel {
+    float: left;
+    margin: 30px 12px;
+    cursor: pointer;
+    position: relative; /* added for positioning relative to img */
+  }
+}
+.content__hover {
+  display: none;
+  height: 70px;
+  width: 100%;
+  background: $hover-works;
+  position: absolute;
+  cursor: pointer;
+  bottom: 3px;
+
+  i {
+    font-size: 30px;
+    color: $primary-color;
+    padding: 20px 27px 0px 7px;
+  }
+}
+
+.item__carousel a img:hover + .content__hover {
+  display: block;
+  text-align: center;
+}

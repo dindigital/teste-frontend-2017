@@ -1,0 +1,23 @@
+@import '../_variables.scss';
+
+.testimonials {
+  margin: 0 auto;
+  width: 430px;
+  position: absolute;
+}
+
+.testimonial__description {
+  font-size: 14px;
+  line-height: 24px;
+  width: 430px;
+}  
+
+.title__testimonial {
+  background: url(../images/comentario.png) no-repeat left;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 19px 0 15px 0;
+  padding: 5px 0 0 38px;
+  text-transform: uppercase;
+}
+
