@@ -1,0 +1,15 @@
+{
+  "name": "bislite",
+  "version": "1.0.0",
+  "description": "### DIN DIGITAL - 2017 ## Contratação CLT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kvnol/teste-frontend-2017.git"
+  },
+  "author": "Kevin Oliveira <me@kevinoliveira.com.br>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kvnol/teste-frontend-2017/issues"
+  },
+  "homepage": "https://github.com/kvnol/teste-frontend-2017#readme"
+}
