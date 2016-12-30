@@ -11,5 +11,8 @@
   "bugs": {
     "url": "https://github.com/kvnol/teste-frontend-2017/issues"
   },
-  "homepage": "https://github.com/kvnol/teste-frontend-2017#readme"
+  "homepage": "https://github.com/kvnol/teste-frontend-2017#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
