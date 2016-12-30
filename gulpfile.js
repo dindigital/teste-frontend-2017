@@ -6,9 +6,11 @@ var clean = require('gulp-clean');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var gulpCopy = require('gulp-copy');
+var connect = require('gulp-connect');
+var files = [ 'app/index.html', 'app/assets/css/main.css', 'assets/js/main.js' ];
 
 gulp.task('clean', function cleanAppFolder () {
-  return gulp.src('app', {read: false})
+  return gulp.src('app/**/*', {read: false})
     .pipe(clean());
 });
 
@@ -21,11 +23,7 @@ gulp.task('views', function buildHTML() {
 gulp.task('sass', function () {
   return gulp.src('src/sass/main.sass')
     .pipe(sass.sync().on('error', sass.logError))
-    .pipe(gulp.dest('src/css'));
-});
- 
-gulp.task('sass:watch', function () {
-  gulp.watch('src/sass/**/*.sass', ['sass']);
+    .pipe(gulp.dest('src/css'))
 });
 
 var srcFiles = [ 'src/_assets/*', '!src/_assets/sass/*' ];
@@ -38,4 +36,20 @@ gulp.task('copy', function copyFiles() {
     .pipe(gulp.dest(srcDest));
 });
 
-gulp.task('default', ['clean', 'views', 'copy']);
+gulp.task('files', function() {
+  gulp
+  .src(files)
+  .pipe(connect.reload());
+});
+
+gulp.task( 'watch', function() {
+  gulp.watch('src/_assets/sass/**/*.sass', ['sass']);
+  gulp.watch('src/_shared/**/*.pug', ['views']);
+  gulp.watch(files, ['files']);
+});
+
+gulp.task( 'connect', function() {
+  connect.server({ root: 'app', livereload: true });
+});
+
+gulp.task('default', ['clean', 'views', 'sass', 'copy', 'connect', 'watch']);
