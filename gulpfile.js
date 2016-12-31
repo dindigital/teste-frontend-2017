@@ -5,6 +5,7 @@ var gutil = require('gulp-util');
 var clean = require('gulp-clean');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
+var concat = require('gulp-concat');
 var gulpCopy = require('gulp-copy');
 var connect = require('gulp-connect');
 var files = [ 'app/index.html', 'app/assets/css/main.css', 'assets/js/main.js' ];
@@ -24,6 +25,18 @@ gulp.task('sass', function () {
   return gulp.src('src/sass/main.sass')
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest('src/css'))
+});
+
+gulp.task('concatStyles', function() {
+  return gulp.src('src/**/*.css')
+    .pipe(concat('main.css'))
+    .pipe(gulp.dest('src/_assets/css'));
+});
+
+gulp.task('concatScripts', function() {
+  return gulp.src('src/**/*.js')
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('src/_assets/js'));
 });
 
 var srcFiles = [ 'src/_assets/*', '!src/_assets/sass/*' ];
@@ -52,4 +65,4 @@ gulp.task( 'connect', function() {
   connect.server({ root: 'app', livereload: true });
 });
 
-gulp.task('default', ['clean', 'views', 'sass', 'copy', 'connect', 'watch']);
+gulp.task('default', ['clean', 'views', 'sass', 'concatStyles', 'concatScripts', 'copy', 'connect', 'watch']);
