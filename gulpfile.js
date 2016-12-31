@@ -33,6 +33,15 @@ gulp.task('css', function () {
     .pipe(gulp.dest('app/css'));
 });
 
+var jsFiles = ['src/lib/**/*.js', 'src/assets/js/**/*.js'];
+
+gulp.task('js', function () {
+  gulp.src(jsFiles)
+    .pipe(uglify())
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('app/js'));
+});
+
 gulp.task('concatScripts', function() {
   return gulp.src('src/**/*.js')
     .pipe(concat('main.js'))
