@@ -17,7 +17,7 @@ gulp.task('clean', function cleanAppFolder () {
     .pipe(clean());
 });
 
-gulp.task('views', ['clean'], function buildHTML() {
+gulp.task('views', function buildHTML() {
   return gulp.src('src/*.pug')
   .pipe(pug())
   .pipe(gulp.dest('app'));
@@ -36,7 +36,7 @@ gulp.task('css', ['clean'], function () {
 
 var jsFiles = ['src/lib/**/*.js', 'src/assets/js/**/*.js'];
 
-gulp.task('js', function () {
+gulp.task('js', ['clean'], function () {
   gulp.src(jsFiles)
     .pipe(uglify())
     .pipe(concat('main.js'))
@@ -49,19 +49,17 @@ gulp.task('copyIMG', ['clean'], function() {
 });
 
 gulp.task('files', function() {
-  gulp
-  .src(files)
-  .pipe(connect.reload());
+  gulp.src(files).pipe(connect.reload());
 });
 
 gulp.task('watch', function() {
   gulp.watch(cssFiles, ['css']);
-  gulp.watch('src/**/*.pug', ['views']);
+  gulp.watch('src/shared/**/*.pug', ['views']);
   gulp.watch(files, ['files']);
 });
 
 gulp.task( 'connect', function() {
-  connect.server({ root: 'app', livereload: true });
+  connect.server({ root: 'app/', livereload: true });
 });
 
 gulp.task('default', ['clean', 'views', 'css', 'js', 'copyIMG', 'connect', 'watch']);
