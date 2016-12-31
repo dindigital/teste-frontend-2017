@@ -17,7 +17,7 @@ gulp.task('clean', function cleanAppFolder () {
     .pipe(clean());
 });
 
-gulp.task('views', function buildHTML() {
+gulp.task('views', ['clean'], function buildHTML() {
   return gulp.src('src/*.pug')
   .pipe(pug())
   .pipe(gulp.dest('app'));
@@ -25,7 +25,7 @@ gulp.task('views', function buildHTML() {
 
 var cssFiles = ['src/lib/**/*.css', 'src/assets/sass/main.sass'];
 
-gulp.task('css', function () {
+gulp.task('css', ['clean'], function () {
   gulp.src(cssFiles)
     .pipe(sass())
     .pipe(cleanCSS({compatibility: 'ie8'}))
@@ -43,7 +43,7 @@ gulp.task('js', function () {
     .pipe(gulp.dest('app/js'));
 });
 
-gulp.task('copyIMG', function() {
+gulp.task('copyIMG', ['clean'], function() {
   gulp.src(['src/assets/img/*.png', 'src/assets/img/*.jpg'])
   .pipe(gulp.dest('app/img'));
 });
