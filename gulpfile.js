@@ -7,8 +7,8 @@ var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var cleanCSS = require('gulp-clean-css');
-var gulpCopy = require('gulp-copy');
-var rename = require('gulp-rename');
+const autoprefixer = require('gulp-autoprefixer');
+var uglify = require('gulp-uglify');
 var connect = require('gulp-connect');
 var files = [ 'app/index.html', 'app/assets/css/main.css', 'assets/js/main.js' ];
 
@@ -29,6 +29,7 @@ gulp.task('css', function () {
   gulp.src(cssFiles)
     .pipe(sass())
     .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(autoprefixer({browsers: ['last 2 versions']}))
     .pipe(concat('main.css'))
     .pipe(gulp.dest('app/css'));
 });
