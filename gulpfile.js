@@ -42,17 +42,6 @@ gulp.task('js', function () {
     .pipe(gulp.dest('app/js'));
 });
 
-gulp.task('concatScripts', function() {
-  return gulp.src('src/**/*.js')
-    .pipe(concat('main.js'))
-    .pipe(gulp.dest('src/assets/js'));
-});
-
-gulp.task('copyJS', function() {
-  gulp.src('src/assets/js/main.js')
-  .pipe(gulp.dest('app/js'));
-});
-
 gulp.task('copyIMG', function() {
   gulp.src(['src/assets/img/*.png', 'src/assets/img/*.jpg'])
   .pipe(gulp.dest('app/img'));
@@ -74,4 +63,4 @@ gulp.task( 'connect', function() {
   connect.server({ root: 'app', livereload: true });
 });
 
-gulp.task('default', ['clean', 'views', 'css', 'concatScripts', 'copyJS', 'copyIMG', 'connect', 'watch']);
+gulp.task('default', ['clean', 'views', 'css', 'js', 'copyIMG', 'connect', 'watch']);
