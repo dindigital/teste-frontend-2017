@@ -1,0 +1,23 @@
+.menu__list
+  margin: $unit__default/3 auto 0
+  padding: 0
+  list-style: none
+
+.menu__item
+  display: inline-block
+
+  &:not(:last-child)
+    margin-right: $unit__default
+
+.menu__link
+  color: $color__text
+  font:
+    weight: 600
+    size: .9em
+  text-transform: uppercase
+
+.submenu__list
+  display: none
+
+  &.active
+    display: block

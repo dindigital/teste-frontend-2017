@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var gutil = require('gulp-util');
+var connect = require('gulp-connect');
 var clean = require('gulp-clean');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
@@ -9,8 +10,7 @@ var concat = require('gulp-concat');
 var cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
-var connect = require('gulp-connect');
-var files = [ 'app/index.html', 'app/assets/css/main.css', 'assets/js/main.js' ];
+var files = [ 'app/index.html', 'app/css/main.css', 'app/js/main.js' ];
 
 gulp.task('clean', function cleanAppFolder () {
   return gulp.src('app/**/*', {read: false})
@@ -29,7 +29,7 @@ gulp.task('css', function () {
   gulp.src(cssFiles)
     .pipe(sass())
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(autoprefixer({browsers: ['last 2 versions']}))
+    .pipe(autoprefixer({ browsers: ['last 2 versions'], flexbox: 'no-2009' }))
     .pipe(concat('main.css'))
     .pipe(gulp.dest('app/css'));
 });
@@ -54,9 +54,9 @@ gulp.task('files', function() {
   .pipe(connect.reload());
 });
 
-gulp.task( 'watch', function() {
+gulp.task('watch', function() {
   gulp.watch(cssFiles, ['css']);
-  gulp.watch('src/shared/**/*.pug', ['views']);
+  gulp.watch('src/**/*.pug', ['views']);
   gulp.watch(files, ['files']);
 });
 
