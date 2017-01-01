@@ -59,7 +59,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task( 'connect', function() {
-  connect.server({ root: 'app/', livereload: true });
+  connect.server({ root: 'app', livereload: true });
 });
 
 gulp.task('default', ['clean', 'views', 'css', 'js', 'copyIMG', 'connect', 'watch']);
