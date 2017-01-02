@@ -1,5 +1,4 @@
 (function() {
-  'use strict';
   var submenuItem = document.getElementsByClassName('submenu');
 
   for(var i = 0; i < submenuItem.length; i++) {
