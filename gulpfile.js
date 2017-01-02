@@ -10,11 +10,16 @@ var concat = require('gulp-concat');
 var cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
-var files = [ 'app/index.html', 'app/css/main.css', 'app/js/main.js' ];
+
+var files = [ 
+  'app/index.html', 
+  'app/css/main.css',
+  'app/js/main.js'
+];
 
 gulp.task('clean', function cleanAppFolder () {
   return gulp.src('app/**/*', {read: false})
-    .pipe(clean());
+  .pipe(clean());
 });
 
 gulp.task('views', function buildHTML() {
@@ -23,7 +28,12 @@ gulp.task('views', function buildHTML() {
   .pipe(gulp.dest('app'));
 });
 
-var cssFiles = ['src/lib/**/*.css', 'src/assets/sass/main.sass'];
+var cssFiles = [
+  'src/lib/owl.carousel/dist/assets/owl.carousel.min.css', 
+  'src/lib/owl.carousel/dist/assets/owl.theme.default.min.css',
+  'src/lib/normalize-css/normalize.css', 
+  'src/assets/sass/main.sass'
+];
 
 gulp.task('css', ['clean'], function () {
   gulp.src(cssFiles)
@@ -34,7 +44,11 @@ gulp.task('css', ['clean'], function () {
     .pipe(gulp.dest('app/css'));
 });
 
-var jsFiles = ['src/lib/**/*.js', 'src/assets/js/**/*.js'];
+var jsFiles = [
+  'src/lib/jquery/dist/jquery.min.js', 
+  'src/lib/owl.carousel/dist/owl.carousel.min.js', 
+  'src/assets/js/**/*.js'
+];
 
 gulp.task('js', ['clean'], function () {
   gulp.src(jsFiles)
