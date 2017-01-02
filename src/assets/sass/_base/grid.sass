@@ -1,6 +1,6 @@
 $grid-gutter: 30px/2
 $grid-columns: 12
-$grid-max: 1000px // variable value
+$grid-max: 1024px // variable value
 
 .container[class*="col-"]
   display: flex
@@ -14,5 +14,5 @@ $grid-max: 1000px // variable value
 
 @for $i from 1 through $grid-columns
   .col-#{$i}
-    width: 90% / $grid-columns * $i
+    width: 100% / $grid-columns * $i
     max-width: $grid-max / $grid-columns * $i
