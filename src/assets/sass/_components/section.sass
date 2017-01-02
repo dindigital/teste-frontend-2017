@@ -1,0 +1,34 @@
+.middle__section
+  display: flex
+  justify-content: space-between
+  background-color: $color__base
+
+.info__icon
+  display: inline-block
+  margin-right: $unit__default/2
+  vertical-align: middle
+
+.info__title
+  display: inline-block
+  font:
+    size: .9em
+    weight: 600
+  text-transform: uppercase
+
+.info__text
+  font-size: .8em
+
+.info__readmore
+  display: block
+  color: $color__brand
+  font-size: .9em
+
+  &:hover
+    color: darken($color__brand, 10%)
+
+  &:before
+    content: '\203A'
+    display: inline-block
+    margin-right: $unit__default/3
+    font-size: 1.2em
+    color: $color__text
