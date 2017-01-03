@@ -1,6 +1,33 @@
 .latestworks
   margin: $unit__default/2 auto
 
+  .container
+    flex-direction: column
+
   .section__header
     width: 100%
     border-bottom: 1px solid darken($color__light, 20%)
+
+.owl-latestworks
+  display: flex
+  justify-content: space-between
+  margin-top: $unit__default
+  padding: 0
+
+  .work
+    position: relative
+
+    &:hover > .work__info
+      height: 80px
+
+  .work__image
+    display: block
+
+  .work__info
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    height: 0
+    background-color: $color__brand
+    transition: .3s height ease-out
