@@ -9,10 +9,16 @@
     border-bottom: 1px solid darken($color__light, 20%)
 
 .owl-latestworks
-  display: flex
-  justify-content: space-between
+  overflow: hidden
   margin-top: $unit__default
   padding: 0
+
+  .owl-stage
+    display: flex
+    justify-content: space-between
+
+  .owl-item
+    width: 220px !important
 
   .work
     position: relative
@@ -29,5 +35,6 @@
     right: 0
     bottom: 0
     height: 0
+    width: 220px
     background-color: $color__brand
     transition: .3s height ease-out
