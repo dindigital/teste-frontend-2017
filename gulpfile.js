@@ -8,7 +8,7 @@ var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var cleanCSS = require('gulp-clean-css');
-const autoprefixer = require('gulp-autoprefixer');
+var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
 
 var files = [ 
@@ -17,12 +17,11 @@ var files = [
   'app/js/main.js'
 ];
 
-gulp.task('clean', function cleanAppFolder () {
-  return gulp.src('app/**/*', {read: false})
-  .pipe(clean());
+gulp.task('clean', function () {
+  return gulp.src('app/**/*').pipe(clean());
 });
 
-gulp.task('views', function buildHTML() {
+gulp.task('views', function () {
   return gulp.src('src/*.pug')
   .pipe(pug())
   .pipe(gulp.dest('app'));
@@ -35,7 +34,7 @@ var cssFiles = [
   'src/assets/sass/main.sass'
 ];
 
-gulp.task('css', ['clean'], function () {
+gulp.task('css', function () {
   gulp.src(cssFiles)
     .pipe(sass())
     .pipe(cleanCSS({compatibility: 'ie8'}))
@@ -50,29 +49,29 @@ var jsFiles = [
   'src/assets/js/**/*.js'
 ];
 
-gulp.task('js', ['clean'], function () {
+gulp.task('js', function () {
   gulp.src(jsFiles)
     .pipe(uglify())
     .pipe(concat('main.js'))
     .pipe(gulp.dest('app/js'));
 });
 
-gulp.task('copyIMG', ['clean'], function() {
+gulp.task('copyIMG', function () {
   gulp.src(['src/assets/img/*.png', 'src/assets/img/*.jpg'])
   .pipe(gulp.dest('app/img'));
 });
 
-gulp.task('files', function() {
+gulp.task('files', function () {
   gulp.src(files).pipe(connect.reload());
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   gulp.watch(cssFiles, ['css']);
   gulp.watch('src/shared/**/*.pug', ['views']);
   gulp.watch(files, ['files']);
 });
 
-gulp.task( 'connect', function() {
+gulp.task( 'connect', function () {
   connect.server({ root: 'app', livereload: true });
 });
 
