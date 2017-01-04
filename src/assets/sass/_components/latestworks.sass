@@ -12,7 +12,6 @@
     border-bottom: 1px solid darken($color__light, 20%)
 
 .section_nav
-
   div
     display: inline-block
     width: 20px
@@ -40,7 +39,8 @@
 .owl-latestworks
   overflow: hidden
   margin-top: $unit__default
-  padding: 0
+  padding: 0 0 $unit__default
+  border-bottom: 1px solid darken($color__light, 20%)
 
   .disabled
     display: none
@@ -57,6 +57,7 @@
 
     &:hover > .work__info
       height: 80px
+      opacity: 1
 
   .work__image
     display: block
@@ -68,5 +69,28 @@
     bottom: 0
     height: 0
     width: 220px
+    display: flex
+    align-items: center
+    justify-content: center
     background-color: $color__brand
-    transition: .3s height ease-out
+    transition: .3s all ease-out
+    opacity: 0
+
+  .work__info-view,
+  .work__info-link
+    display: inline-block
+    background-repeat: no-repeat
+
+    &:hover
+      opacity: .8
+
+  .work__info-view
+    width: 35px
+    height: 25px
+    margin-right: $unit__default/2
+    background-image: url('/img/info_view.png')
+
+  .work__info-link
+    width: 20px
+    height: 25px
+    background-image: url('/img/info_link.png')
