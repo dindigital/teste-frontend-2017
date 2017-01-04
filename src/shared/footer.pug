@@ -1,1 +1,42 @@
+footer.footer
+  div.container.col-12
+    section.footer__top.col-12
+      article.footer__about.col-3
+        header.footer__heading
+          h4.footer__title About Us
+        p.footer__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+      nav.footer__nav.col-4
+        ul.footer__nav-list
+          header.footer__heading
+            h4.footer__title Explore
+          -
+            var exploreList = ['Home', 'About Us', 'Services', 'Portfolio', 'Blog']
+          each item in exploreList
+            li.footer__nav-item #[a(href='#').footer__nav-link= item]
+
+        ul.footer__nav-list
+          header.footer__heading
+            h4.footer__title Browse
+          -
+            var browseList = ['Careers', 'Press & Media', 'Contact Us', 'Terms of Services', 'Privacy Policy']
+          each item in browseList
+            li.footer__nav-item #[a(href='#').footer__nav-link= item]
+
+      article.footer__contact.col-2
+        header.footer__heading
+          h4.footer__title Contact Us
+        strong BisLite Inc.
+        p.footer__text Always Street 265 0X - 125 - Canada
+        p.footer__text Phone: 987-6543-210
+        p.footer__text Fax: 987-6543-210
+
+      div.footer__social.col-3
+        header.footer__heading
+          h4.footer__title Connect With Us
+
+          
+    section.footer__copy.col-12
+
+
 script(src='js/main.js')
