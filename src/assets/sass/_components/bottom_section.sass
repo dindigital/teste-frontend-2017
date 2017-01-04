@@ -35,3 +35,45 @@
   &:nth-child(5)
     border-left: 0
     border-right: 0
+
+.section__ad
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: $unit__default
+  border: 1px solid lighten($color__brand, 25%)
+  background-color: lighten($color__brand, 50%)
+
+  .ad__text,
+  .ad__button
+    margin: 0
+
+  .ad_text
+    line-height: 1.5em
+
+  .ad__button
+    display: block
+    padding: $unit__default/2
+    border: 1px solid $color__brand
+    border-radius: $unit__default/3
+    font:
+      size: 1.2em
+      weight: 600
+    text:
+      align: center
+      transform: uppercase
+    background: linear-gradient(180deg, lighten($color__brand, 25%) 2%, lighten($color__brand, 20%) 2%, lighten($color__brand, 20%) 85%, $color__brand 100%)
+
+    &:hover
+      color: $color__light
+
+    &:before
+      content: ""
+      display: inline-block
+      width: 30px
+      height: 25px
+      margin-right: $unit__default/3
+      vertical-align: middle
+      background:
+        image: url('/img/download_icon.png')
+        repeat: no-repeat
