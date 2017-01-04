@@ -1,0 +1,118 @@
+@mixin size($width: 100%, $height:100%) {
+  width: $width;
+  height: $height;
+}
+
+@mixin box-sizing ($type: border-box) {
+	-webkit-box-sizing: $type;
+	-moz-box-sizing: $type;
+	box-sizing: $type;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin box-shadow($horizontal: 0px, $vertical: 1px, $blur: 2px, $color: #CCC) {
+	-webkit-box-shadow: $horizontal $vertical $blur $color;
+	-moz-box-shadow: $horizontal $vertical $blur $color;
+	box-shadow: $horizontal $vertical $blur $color;
+}
+
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
+@mixin delay($delay){
+	-webkit-transition-delay: $delay;
+    transition-delay: $delay;
+}
+
+@mixin scale($scale: 1) {
+	-webkit-transform: scale($scale);
+	-moz-transform: scale($scale);
+	-ms-transform: scale($scale);
+	-o-transform: scale($scale);
+	transform: scale($scale);
+}
+
+@mixin rotate($rotate){
+	-ms-transform: rotate($rotate); /* IE 9 */
+    -webkit-transform: rotate($rotate); /* Chrome, Safari, Opera */
+    transform: rotate($rotate);
+}
+
+@mixin alpha70 {
+	background: rgba(0,0,0,0.7);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+// PROPRIEDADES DE FLEX BOX
+@mixin displayflex{
+	display: flex;
+	-webkit-display: -webkit-box;
+    -webkit-display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin displayinlineflex{
+	display: inline-flex;
+    -webkit-display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+@mixin alignstretch{
+	-webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+@mixin directioncolumn{
+	-webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@mixin directionrow{
+	-webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+@mixin justifycenter{
+	justify-content: center;
+	-ms-justify-content: center;
+}
+
+@mixin aligncenter{
+	align-items: center;
+	-ms-align-items: center;
+}
+
+@mixin flexwrap{
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+}
+
+@mixin flexnowrap{
+	flex-wrap: nowrap;
+	-webkit-flex-wrap: nowrap;
+}
+
+@mixin flexgrow ($flexgrow: 0) {
+	-webkit-flex-grow: $flexgrow;
+	-webkit-box-flex: $flexgrow;
+	-ms-flex-positive: $flexgrow;
+	flex-grow: $flexgrow;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "assistencia lg",
+  "description": "frontend - flight php",
+  "main": "index.php",
+  "authors": [
+    "Guilherme <guilherme.estrela@3xceller.com.br>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "jquery": "^2.1.4"
+  }
+}

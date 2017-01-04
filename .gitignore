@@ -1,1 +1,5 @@
 .DS_Store
+HTML/composer.phar
+HTML/vendor/
+HTML/node_modules
+HTML/.idea

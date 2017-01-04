@@ -1,0 +1,128 @@
+// TÍTULOS E PARÁGRAFOS
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5{
+
+	font-family: $font-title;
+	color: $text-color;
+	text-transform: uppercase;
+	line-height: 1.5em;
+	font-size: #{15/$b-font-size}em;
+	font-weight: bold;
+}
+
+
+// CORES DE TEXTO
+.txt-preto{color: #000;}
+.txt-branco{color: #fff;}
+.txt-center{text-align:center;}
+.txt-bold{font-weight: 600;}
+
+p{
+	font-family:$font-family-base;
+	font-size: #{13/$b-font-size}em;
+	color:$text-color;
+
+	strong{
+		font-weight:bold;
+	}
+}
+
+small{
+	font-size: 80%;
+}
+
+// COR DOS LINKS
+a{
+	font-size: #{13/$b-font-size}em;
+	color: #35acc8;
+	@include transition(color, .3s, ease);
+
+	&:hover{
+	}
+}
+
+// BOTAO
+.btn-download{
+	background: url(../images/button-bg.jpg) repeat-x;
+	background-size: auto 100%;
+	padding: 20px;
+	color: #0d0707;
+	font-size: #{18/$b-font-size}em;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 10px;
+	border: 1px solid #2aacc8;
+	vertical-align: middle;
+
+	&:hover{
+		text-decoration: none;
+	}
+
+	&:before{
+		content: '';
+		width: 28px;
+		height: 25px;
+		display: inline-block;
+		background: url(../images/sprite.png) -226px -5px no-repeat;
+		margin-right: 20px;
+		vertical-align: middle;
+		margin-top: -2px;
+	}
+}
+
+// RETIRA FORMATAÇÃO DAS ULs E LIs
+.non-style-list{
+	list-style: none;
+	padding: 0;
+	margin:0;
+
+	ul{
+		list-style: none;
+		padding: 0;
+		margin:0;
+	}
+	li{list-style: none;}
+}
+
+
+// REDEFINE O STYLE DO SWIPER
+.swiper-container-horizontal>.swiper-pagination-bullets{
+	margin: 10px 0 0;
+	position: relative;
+	bottom: 0;
+
+	.swiper-pagination-bullet{
+		width: 14px;
+		height: 14px;
+
+		&.swiper-pagination-bullet-active{
+			background: #fff;
+		}
+	}
+}
+
+// TITULO COM ICONE
+.ico-title{
+	display: inline-block;
+	margin: 0 0 10px;
+	line-height: 2em;
+
+	&:before{
+		content: '';
+		width: 28px;
+		height: 30px;
+		float: left;
+		margin-right: 15px;
+		vertical-align: middle;
+	}
+}
+.ico-seta:before{
+	background: url(../images/sprite.png) no-repeat 0 0;
+	width: 25px;
+}
+.ico-balao:before{
+	background: url(../images/sprite.png) no-repeat -28px 0;
+	width: 25px;
+}
+.ico-user:before{
+	background: url(../images/sprite.png) no-repeat -61px 0;
+}
