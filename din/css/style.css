@@ -1,0 +1,219 @@
+
+body{margin:0px;font-family:Arial, sans-serif;}
+
+/* MENU*/
+
+.navbar-default {
+  background-color:#e8ebf1;
+  border-color: transparent;
+  margin-bottom: 0; 
+  padding:1.5vw 0vw 3.5vw 14vw;
+}
+.nav-bar{
+    margin-top: 27px;
+}
+.navbar-toggle span{
+    color: #fff;
+}
+ul.nav{
+    margin-top:2vw;
+    margin-left:5vw;
+    padding: 0;
+}
+
+.navbar-default .navbar-nav>li>a:first-child{
+  padding: 0vw 2vw 0vw 2vw;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #000;
+  font-size: 1vw;
+  font-weight: bold;
+  padding: 8px 8px;
+  text-transform: uppercase;
+
+}
+.navbar-default .navbar-nav>li>a:hover{
+    
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #000;
+}
+.navbar-default .navbar-nav > .active > a{  
+    background-color:none !important;
+}
+.navbar-default .navbar-toggle {
+   margin-top: 4px;
+}
+
+.btn:hover, .btn:focus, .btn.focus{
+   color: #f4e61b !important;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  border-top: 5px solid #2aacc8;
+  color: #2aacc8;
+  background-color:#e8ebf1 important;
+}
+
+/* FIM MENU */
+
+#slider{
+  background-color:#81e4ED;
+  padding-top:2vw;padding-bottom: 4vw;
+}
+#conteudoCaixa{
+  background-color:#e8ebf1;
+  padding-top:4vw;
+}
+.descricaoIcone h6{
+  text-transform:uppercase;
+  font-weight:bold;
+  font-size:0.9vw
+}
+.paragrafoIcone{
+  margin-top:1vw;
+ }
+.nopadding{
+  padding:0px;
+}
+.linkRead{
+  padding-bottom:6vw;
+}
+.paragrafoIcone p{
+  color: #363636;
+  line-height: 20px;
+  margin-bottom: 22px;
+  font-size:0.9vw
+}
+.linkRead a{
+  font-size:0.9vw;
+  color: #2aacc8;
+}
+.trabalhosCaixa{
+  border-top:1px solid #dfe1e5;
+  margin-top:1vw;
+  padding:30px 0px 30px 0px;
+  border-bottom:1px solid #dfe1e5;
+}
+.marginImg{
+  margin-right:1.5vw;
+}
+.right15{
+  padding:0px 15px 0px 0px;
+}
+.paragrafoImagens{
+  font-size:0.9vw;
+  float:left;
+  font-size: 15px;
+  font-weight: bold;
+  height: 16px;
+  margin: 19px 0 15px 0;
+  padding: 8px 0 0 1px;
+}
+.paragrafos{
+  color: #363636;
+  line-height: 25px;
+  margin-bottom: 22px;
+  font-size:1vw;
+  margin-top:15px;
+}
+.clientes{
+  margin-top:15px;
+}
+.download{
+  background: #e8fcfe;
+  border: 1px solid #81e4ed;
+  padding: 15px 15px;
+  margin-top:40px;
+}
+.botaoDownload{
+  padding:15px 0px 0px 40px;
+}
+footer{
+  margin-top:30px;
+  background: #e8ebf1;
+  border-top: 1px solid #d9d9d9;
+  padding-top:1vw;
+  padding-bottom: 2vw
+}
+.listas li {
+  list-style:none !important;
+  text-align:left;
+  margin-left:-1.8vw
+}
+.endereco{
+  color: #363636;
+  margin-bottom: 22px;
+  font-size:0.9vw;
+  margin-top:15px;
+}
+.sociais img{
+  margin-bottom:0.8vw;
+}
+.copy{
+  color: #363636;
+  margin-bottom: 22px;
+  font-size:0.9vw;
+  margin-top:15px;
+}
+.logoRodape{
+  margin-top:1.5vw;
+  margin-left:-1vw;
+}
+
+.carousel-indicators {margin-bottom:-4.2vw !important;}
+.carousel-indicators li {width:15px !important; height:15px !important;}
+.padrao{background:none !important;box-shadow:none !important}
+
+
+/* MOBILE */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .paragrafos{          
+      font-size:3.9vw;
+      margin-top:15px;
+    }
+    .navbar-default{
+      padding:0px;
+    }
+    .logo{
+      width:60%;
+    }
+    .navbar-default .navbar-toggle {     
+      margin-right:8vw
+    }
+
+    .paragrafoIcone p{      
+      line-height: 20px;
+      margin-bottom: 22px;
+      font-size:3.9vw;
+      margin-top:1vw
+    }
+    .right15{
+       padding:0px 0px 0px 15px !important;
+    }
+    .linkRead a{
+      font-size:3.9vw;     
+    } 
+
+    .descricaoIcone h6 {   
+      font-size: 3.9vw;
+    }
+    .trabalhosCaixa img{margin-bottom:3vw}
+    .clientes img{margin-bottom:3vw;margin-left:10vw}
+    .listas li{margin-left:-6vw}
+    .endereco{font-size:3vw}
+    .sociais img{margin-top:4vw;}
+    .copy{     
+      font-size:2.9vw;margin-top: 8vw;
+    }
+
+    .navbar-default .navbar-nav>li>a {
+    
+      font-size: 3vw;
+     
+
+    }
+
+}
