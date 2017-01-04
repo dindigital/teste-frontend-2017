@@ -3,11 +3,32 @@
 
   $(document).ready(function(){
     owl.owlCarousel({
-      items: 4,
       autoplay: false,
       loop: true,
       dots: false,
-      nav: true
+      nav: true,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+
+        450: {
+          items: 2,
+          nav: false
+        },
+
+        800: {
+          items: 3,
+          nav: false
+        },
+
+        1024: {
+          items: 4,
+          nav: false
+        }
+      }
     });
 
     $('.section_nav .owl-prev').click(function() {
