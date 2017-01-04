@@ -4,8 +4,20 @@
   border-bottom: 1px solid darken($color__base, 10%)
   background-color: $color__base
 
+  @media (max-width: 1023px)
+    .container
+      flex-wrap: wrap
+
 .section__info
   margin: $unit__default 0
+
+  @media (max-width: 1023px)
+    width: 50%
+    max-width: 50%
+
+  @media (max-width: 530px)
+    width: 100%
+    max-width: 100%
 
 .section__icon
   display: inline-block
