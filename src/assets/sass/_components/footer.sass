@@ -10,9 +10,32 @@
   justify-content: space-between
   padding: 0
 
+  @media (max-width: 800px)
+    flex-direction: column
+    flex-wrap: wrap
+
+.footer__about
+  @media (max-width: 800px)
+    width: 100%
+    max-width: 100%
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+
 .footer__nav
   display: flex
   justify-content: space-around
+
+  @media (max-width: 800px)
+    width: 50%
+    max-width: 50%
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+
+  @media (max-width: 500px)
+    width: 100%
+    max-width: 100%
 
 .footer__nav-list
   margin: 0
@@ -31,9 +54,26 @@
   line-height: 1.5em
 
 .footer__contact
+  @media (max-width: 800px)
+    width: 100%
+    max-width: 100%
+    margin-left: auto
+    margin-right: auto
+    text-align: center  
 
   strong
     font-size: .8em
+
+.footer__social
+  @media (max-width: 800px)
+    width: 425px
+    max-width: 100%
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+
+  @media (max-width: 500px)
+    width: 100%
 
 .social__list
   display: flex
@@ -42,15 +82,28 @@
 .social__link:not(:last-child)
   margin-right: $unit__default/2
 
+  @media (max-width: 500px)
+    margin: 0 auto
+
 .footer__copy
   display: flex
   align-items: center
   justify-content: space-between
   margin-bottom: 0
 
+  @media (max-width: 800px)
+    flex-direction: column
+
 .copy__text
   margin: $unit__default/6 auto
   font-size: .75em
 
+  @media (max-width: 800px)
+    width: 100%
+    text-align: center
+
 .copy__logo
   text-align: center
+
+  @media (max-width: 800px)
+    width: 100%
