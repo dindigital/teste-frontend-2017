@@ -1,0 +1,35 @@
+.alert {
+	padding: 25px;
+	margin-bottom: 40px;
+	&-success {
+		background: #e8fcfe; 
+		border: 1px solid #81e4ed;
+	}
+	p {
+		font-size: 16px;
+		line-height: 26px;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (min-width: sm) {
+	.alert {
+		p {
+			float: left;
+			width: calc(100% - 250px);
+		}
+		.button {
+			float: right;
+			position: relative;
+			top: 20px;
+		}
+	}
+}
+
+@media screen and (min-width: md) {
+	.alert {
+		.button {
+			top: 0px;
+		}
+	}
+}
