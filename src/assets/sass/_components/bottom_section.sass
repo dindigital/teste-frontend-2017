@@ -10,4 +10,28 @@
 .section__author
   font:
     style: italic
-    weight: 600    
+    weight: 600
+
+.clients__logos
+  display: flex
+  flex-wrap: wrap
+
+.client__logo
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100px
+  border: 1px solid darken($color__light, 20%)
+  padding: 0
+  margin: 0
+  box-shadow: inset 0 0 30px rgba(0,0,0,.1)
+  
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3)
+    border-bottom: 0
+
+  &:nth-child(2),
+  &:nth-child(5)
+    border-left: 0
+    border-right: 0
