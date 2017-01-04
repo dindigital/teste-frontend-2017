@@ -1,6 +1,13 @@
 .bottom__section
   display: flex
 
+  @media (max-width: 830px)
+    flex-direction: column
+
+    .col-6
+      width: 100%
+      max-width: 100%
+
 .section__article
   font-size: .9em
 
@@ -36,6 +43,10 @@
     border-left: 0
     border-right: 0
 
+.client__logo-img
+  max-width: 100%
+  height: auto
+
 .section__ad
   display: flex
   align-items: center
@@ -44,9 +55,19 @@
   border: 1px solid lighten($color__brand, 25%)
   background-color: lighten($color__brand, 50%)
 
+  @media (max-width: 750px)
+    flex-direction: column
+
   .ad__text,
   .ad__button
     margin: 0
+
+    @media (max-width: 750px)
+      width: 100%
+      max-width: 100%
+
+      &:not(:last-child)
+        margin-bottom: $unit__default
 
   .ad_text
     line-height: 1.5em

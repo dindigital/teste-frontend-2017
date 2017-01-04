@@ -14,12 +14,12 @@
           nav: false
         },
 
-        450: {
+        440: {
           items: 2,
           nav: false
         },
 
-        800: {
+        700: {
           items: 3,
           nav: false
         },
