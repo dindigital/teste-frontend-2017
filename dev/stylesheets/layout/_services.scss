@@ -1,0 +1,44 @@
+@import '../_variables.scss';
+
+.services {
+  padding: 50px 0 70px 0;
+  display: table;
+  background: $secondary-color;
+  width: 100%;
+  
+  .service {
+    float: left;
+    padding-right: 10px;
+
+    .service__image {
+      float: left;
+    }
+
+    .service__title {
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 13px 50px 20px;
+      width: 230px;
+    }
+
+    .service__description {
+      color: $service-description-color;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 20px;
+      margin-bottom: 22px;
+      width: 216px;
+    }
+
+    .service__link {
+      color: $service-link
+    }
+    
+    i.fa.fa-chevron-right {
+      color: $tertiary-color;
+      margin: 0 8px 1px 0;
+      font-size: .1em;
+    }
+  }
+  
+}

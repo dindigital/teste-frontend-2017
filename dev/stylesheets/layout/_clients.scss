@@ -1,0 +1,25 @@
+@import '../_variables.scss';
+
+.clients {
+  float: right;
+  margin-bottom: 40px;
+}
+.title__clients {
+  background: url(../images/clientes.png) no-repeat left;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 19px 0 15px 0;
+  padding: 4px 0 0 38px;
+  text-transform: uppercase;
+}
+
+.clients ul {
+  background: $bg-brand-clients;
+  height: 200px;
+  width: 480px;
+}
+
+.clients img {
+  float: left;
+  margin: 1px;
+}

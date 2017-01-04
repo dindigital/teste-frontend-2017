@@ -1,0 +1,92 @@
+@import '../_variables.scss';
+
+.header {
+  background: $secondary-color;
+  height: 120px;
+
+  .image__header {
+    margin-top: 37px;
+  }
+}
+
+.menu {
+  float: right;
+  margin-top: 54px;
+}
+
+.nav__item {
+  float: left;
+  margin: 0 14px;
+}
+
+.nav__link {
+  color: $tertiary-color;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 8px 8px;
+  text-transform: uppercase;
+
+  &:hover {
+    border-top: 5px solid $hover-menu;
+  }
+
+}
+
+.nav__secondary {
+  position: relative;
+  z-index: 2;
+
+  li a {
+    display: block;
+  }
+  
+  ul {
+    background: $primary-color;
+    border-bottom: 5px solid $hover-menu;
+    padding: 12px 0;
+    position: absolute;
+    top: 24px;
+    visibility: hidden;
+    width: 197px;
+  }
+}
+
+.nav__item:hover.nav__item ul {
+  visibility: visible;
+}
+
+.nav__secondary {
+  .nav__link i {
+    padding-right: 23px;
+  }
+  &:hover .nav__link {
+    background: $primary-color 92%;
+    border-top: 5px solid $hover-menu;
+    color: $hover-menu;
+  }
+}
+
+.secondary__list {
+  margin: 0 5px;
+  padding: 10px;
+  border-bottom: 1px solid $border-dropdown; 
+
+  &:nth-child(n+5) {
+    border-bottom: none;
+  } 
+}
+
+.secondary__link {
+  color: $tertiary-color;
+  font-size: 13px;
+  text-transform: capitalize;
+
+  &:hover {
+    color: $hover-menu;
+  }
+
+}
+
+.current {
+  border-top: 5px solid $hover-menu;
+}

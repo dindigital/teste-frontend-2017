@@ -1,0 +1,30 @@
+@import '../_variables.scss';
+
+.download {
+  background: $bg-download;
+  border: 1px solid $bg-apresentation;
+  clear: both;
+  height: 78px;
+  padding: 30px 30px;
+  width: 940px;
+  height: 140px;
+  margin: 0 auto;
+  
+  .download__description {
+    color: $footer-text-color;
+    float: left;
+    font-size: 16px;
+    line-height: 26px;
+    width: 608px;
+    
+  }
+
+  a {
+    display: block;
+    color: $color-button;
+    font-size: 18px;
+    font-weight: bold;
+    float: right;
+    margin: 0;
+  }
+}
