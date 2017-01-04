@@ -18,7 +18,7 @@ var files = [
 ];
 
 gulp.task('clean', function () {
-  return gulp.src('app/**/*').pipe(clean());
+  return gulp.src('app').pipe(clean());
 });
 
 gulp.task('views', function () {
@@ -37,8 +37,13 @@ var cssFiles = [
 gulp.task('css', function () {
   gulp.src(cssFiles)
     .pipe(sass())
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(autoprefixer({ browsers: ['last 2 versions'], flexbox: 'no-2009' }))
+    .pipe(cleanCSS({
+      compatibility: 'ie8'
+    }))
+    .pipe(autoprefixer({ 
+      browsers: ['last 2 versions'], 
+      flexbox: 'no-2009' 
+    }))
     .pipe(concat('main.css'))
     .pipe(gulp.dest('app/css'));
 });
@@ -66,9 +71,10 @@ gulp.task('files', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(cssFiles, ['css']);
-  gulp.watch('src/shared/**/*.pug', ['views']);
   gulp.watch(files, ['files']);
+  gulp.watch('src/shared/**/*.pug', ['views']);
+  gulp.watch(cssFiles, ['css']);
+  gulp.watch(jsFiles, ['js']);
 });
 
 gulp.task( 'connect', function () {
