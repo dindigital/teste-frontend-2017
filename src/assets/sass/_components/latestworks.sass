@@ -5,8 +5,37 @@
     flex-direction: column
 
   .section__header
+    display: flex
+    align-items: center
+    justify-content: space-between
     width: 100%
     border-bottom: 1px solid darken($color__light, 20%)
+
+.section_nav
+
+  div
+    display: inline-block
+    width: 20px
+    height: 20px
+    background-color: lighten($color__brand, 20%)
+    border-radius: 100%
+    cursor: pointer
+
+    &:before
+      display: block
+      color: lighten($color__text, 20%)
+      font-size: 1.5em
+      text-align: center
+      line-height: $unit__default/2
+
+    &:not(:last-child)
+      margin-right: $unit__default/6
+
+  .owl-prev:before
+    content: '\2039'
+
+  .owl-next:before
+    content: '\203A'
 
 .owl-latestworks
   overflow: hidden
