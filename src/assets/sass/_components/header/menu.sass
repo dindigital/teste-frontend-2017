@@ -1,0 +1,133 @@
+.menu__toggle
+  display: none
+  -webkit-appearance: none
+  -moz-appearance: none
+  background: none
+  border: 0
+  cursor: pointer
+  font:
+    size: 2em
+    weight: 600
+
+  &:before
+    content: '\2630'
+
+  @media (max-width: 1023px)
+    display: block
+
+.menu__toggle.active
+  position: fixed
+  top: $unit__default
+  right: $unit__default
+  z-index: 9
+
+  &:before
+    content: '\00D7'
+
+.menu__list
+  margin: 0 auto
+  padding: 0
+  list-style: none
+  font-size: .8em
+
+  @media (max-width: 1023px)
+    display: none
+
+  &.active
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    text-align: center
+    background-color: rgba($color__brand, .85)
+
+    .menu__item
+      display: block
+      font-size: 2em
+      border: 0
+      margin: 0 auto $unit__default/2
+
+      &:first-child
+        margin-top: $unit__default/2
+
+    .menu__link:hover
+      color: $color__light
+
+    .submenu
+      
+      &:hover
+        background: none
+        border: 0
+
+      .menu__link:after
+        content: none
+
+      &.currentItem
+        .submenu__list
+          display: none
+
+.menu__item
+  position: relative
+  display: inline-block
+  border-top: 4px solid transparent
+
+  &:not(:last-child)
+    margin-right: $unit__default/3
+
+  &.submenu
+    
+    &:hover
+      background-color: $color__light
+      border-top: 4px solid $color__brand
+
+    .menu__link:after
+      content: '\203A'
+      display: inline-block
+      margin-left: $unit__default/3
+      transform: rotate(90deg)
+      vertical-align: middle
+      color: $color__text
+      font-size: 1.5em
+
+  &.currentItem
+    > .submenu__list
+      display: block
+
+    .menu__link
+      color: $color__brand
+
+.menu__link
+  display: block
+  padding: $unit__default/6 $unit__default/2
+  color: $color__text
+  font-weight: 600
+  text-transform: uppercase
+
+.submenu__list
+  position: absolute
+  display: none
+  margin: 0
+  padding: $unit__default/6
+  min-width: 210px
+  list-style: none
+  border-bottom: 4px solid $color__brand
+  background-color: $color__light
+
+  &.active
+    display: block
+
+.submenu__item
+
+  &:not(:last-child)
+    border-bottom: 1px solid darken($color__light, 20%)
+
+.submenu__link
+  display: block
+  padding: $unit__default/2 $unit__default/3

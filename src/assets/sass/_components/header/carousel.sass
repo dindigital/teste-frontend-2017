@@ -1,0 +1,20 @@
+.owl-bislite
+  
+  .owl-stage-outer
+    z-index: 1
+
+  .owl-nav.disabled + .owl-dots
+    position: relative
+    z-index: 2
+    margin-top: -27px
+
+  .owl-dots .owl-dot 
+    span
+      width: 15px
+      height: 15px
+      background-color: rgba(0,0,0,.3)
+
+    &:hover,
+    &.active
+      span
+        background-color: $color__light

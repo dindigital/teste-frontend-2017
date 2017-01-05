@@ -1,0 +1,50 @@
+.middle__section
+  display: flex
+  justify-content: space-between
+  border-bottom: 1px solid darken($color__base, 10%)
+  background-color: $color__base
+
+  @media (max-width: 1023px)
+    .container
+      flex-wrap: wrap
+
+.section__info
+  margin: $unit__default 0
+
+  @media (max-width: 1023px)
+    width: 50%
+    max-width: 50%
+
+  @media (max-width: 530px)
+    width: 100%
+    max-width: 100%
+
+.section__icon
+  display: inline-block
+  margin-right: $unit__default/2
+  vertical-align: middle
+
+.section__title
+  display: inline-block
+  font:
+    size: .95em
+    weight: 600
+  text-transform: uppercase
+
+.info__text
+  font-size: .8em
+
+.info__readmore
+  display: block
+  color: $color__brand
+  font-size: .9em
+
+  &:hover
+    color: darken($color__brand, 10%)
+
+  &:before
+    content: '\203A'
+    display: inline-block
+    margin-right: $unit__default/3
+    font-size: 1.2em
+    color: $color__text
